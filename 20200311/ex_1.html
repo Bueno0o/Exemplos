@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+            #quadrado{
+                border-style: solid;
+                border-width: 1px;
+                width: 200px;
+                height:200px;
+            }
+        </style>
+        <script>
+            function escreve_no_quadro(texto){
+                document.getElementById("quadrado").innerHTML = texto;
+            }
+            function troca_cor_quadrado(cor){
+                alert(cor);
+                document.getElementById("quadrado").style.backgroundColor = cor;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="quadrado">
+        </div>
+        <br />
+        <form name="teste">
+            texto para o quadrado:
+            <input type="text" name="textoQuadrado" onkeyup="escreve_no_quadro(this.value)" />
+            <br /><br />
+            cor de fundo do quadrado:
+            <input type="color" name="corQuadrado" onchange="troca_cor_quadrado(this.value)" />
+        </form>
+    </body>
+</html>

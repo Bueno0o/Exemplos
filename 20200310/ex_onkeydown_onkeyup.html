@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Onfocus</title>
+    <script>
+        function aciona_tecla(valor){
+           document.getElementById("msg").innerHTML = valor;
+        }
+    </script>
+</head>
+<body>
+    <div id="msg"></div>
+        <form name="f">
+            <input type="text" name="x" placeholder="aciona ao sair da tecla.." 
+            onkeyup="aciona_tecla(this.value);" />
+
+            <br />
+
+            <input type="text" name="x" placeholder="aciona ao pressionar a tecla..." onkeydown="aciona_tecla(this.value);" />
+        </form> 
+</body>
+</html>

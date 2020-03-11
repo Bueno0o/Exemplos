@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Onfocus</title>
+    <script>
+        function aciona_onfocus(valor){
+           document.getElementById("msg").innerHTML = valor;
+        }
+    </script>
+</head>
+<body>
+    <div id="msg"></div>
+    <br />
+    <form name="f">
+        <input type="text" name="x" onfocus="aciona_onfocus(this.value)" /><br>
+        <select name="z" onblur="aciona_onfocus(this.value)" >
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+        <br>
+            <input type="radio" name="y" value="A" onblur="aciona_onfocus(this.value)" />A
+            <input type="radio" name="y" value="B" onblur="aciona_onfocus(this.value)" />B
+            <input type="radio" name="y" value="C" onblur="aciona_onfocus(this.value)" />C
+        </br>
+    </form>
+</body>
+</html>
